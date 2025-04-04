@@ -1,0 +1,93 @@
+:root {
+    --color-slate-900: #1F314F; /* Dark blue color for the card title */
+    --color-slate-300: #D5E1EF; /* Light blue background color */
+    --font-size-text-preset-1: 22px; /* Font size for the card title */
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Stacks the card and attribution vertically */
+    justify-content: center; /* Centers the card vertically */
+    align-items: center; /* Centers the card horizontally */
+    min-height: 100vh; /* Ensures the body takes the full viewport height */
+    margin: 0; /* Removes default margin */
+    background: var(--color-slate-300, #D5E1EF); /* Background color */
+    position: relative; /* Allows positioning of the attribution */
+    overflow-x: hidden; /* Prevents horizontal overflow */
+}
+
+.card_layout {
+    display: flex;
+    flex-direction: column; /* Stacks elements vertically */
+    align-items: center; /* Centers content horizontally */
+    padding: 16px; /* Matches Figma's padding */
+    box-sizing: border-box; /* Ensures padding is included in width/height */
+}
+.card_style {
+    box-sizing: border-box; /* Ensures padding is included in width/height */
+    border-radius: 20px; /* Rounded corners */
+    background: var(--color-white, #FFF);
+
+    /* Updated box-shadow */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    
+    /* Fixed dimensions from Figma */
+    width: 320px; /* Matches Figma's width */
+    height: 499px; /* Matches Figma's height */
+    padding: 16px; /* Adds consistent padding inside the card */
+
+    /* Center content inside the card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px; /* Adds spacing between elements */
+}
+
+.qr_code_image {
+    width: 100%; /* Makes the QR code image responsive */
+    max-width: 288px; /* Matches the Figma width */
+    border-radius: 10px; /* Rounded corners for the image */
+    margin: 0; /* Adds spacing below the image */
+}
+.card_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 37px;
+    width: 288px;
+    max-width: 100%;
+    background: none; /* Remove any background color */
+    box-sizing: border-box;
+}
+
+.card_title {
+    font-family: 'Outfit', sans-serif;
+    font-size: var(--font-size-text-preset-1, 22px);
+    font-weight: 700;
+    text-align: center;
+    color: var(--color-slate-900, #1F314F);
+    line-height: 120%;
+    margin: 0; /* Remove any default margin */
+}
+
+.card_subtext {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    color: hsl(220, 15%, 55%);
+    line-height: 21px;
+    letter-spacing: 0.2px;
+    margin: 0; /* Remove any default margin */
+    width: 256px;
+    max-width: 100%;
+}
+.attribution {
+    font-size: 11px; /* Consistent font size */
+    text-align: center;
+    color: hsl(228, 45%, 44%);
+    position: absolute; /* Positions the attribution at the bottom */
+    bottom: 16px; /* Adds spacing from the bottom of the viewport */
+}
